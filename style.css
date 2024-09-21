@@ -54,7 +54,7 @@ main input{
     border-radius: 28px;
     border: none;
     outline: none; 
-    width: 50vh;
+    width: 68vh;
 }
 
 .search{
@@ -64,5 +64,26 @@ main input{
     background-color: #f6f6f6;
     border: 1px solid rgba(0, 0, 0, 0.24);
     position: relative;
+}
+
+.buscaPais{
+    max-width: 1080px;
+    margin: 20px auto;
+    display: grid;
+    gap: 13px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.paises-div{
+    background-color: var(--azul-claro4);
+    padding: 15px;
+    border: 1px solid rgba(154, 60, 60, 0.507);
+    border-radius: 6px;
+    width: 256px;
+}
+
+#flags{
+    width: 100%;
+    height: 150px;
 }
 

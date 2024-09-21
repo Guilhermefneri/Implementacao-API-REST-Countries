@@ -16,8 +16,11 @@ function mostrarPais(paises){
 // pegar os dados dos países e colocar no html
 function pegarPais(pais){
     console.log(pais)
-    return `<div>
+    return `<div class = "paises-div">
+            <img id="flags" src="${pais.flags.png}" alt="${pais.flags.alt}">
             <h2>${pais.name.common}</h2>
+            <h4>Capital: ${pais.capital}</h4>
+            <h4>Region: ${pais.region}</h4>
             </div>`
 }
 
