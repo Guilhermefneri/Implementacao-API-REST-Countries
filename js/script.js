@@ -11,17 +11,27 @@ function mostrarPais(paises){
     //mostrar div no html
     const buscaPais = document.getElementById('buscaPais');
     buscaPais.innerHTML = paisesHTML.join(' ');
+    
+    const paisesDiv = document.querySelectorAll('.paises-div')
+    
+    paisesDiv.forEach(function (div){
+        div.addEventListener('click', info)
+    })
 }
 
 // pegar os dados dos países e colocar no html
 function pegarPais(pais){
     console.log(pais)
     return `<div class = "paises-div">
-            <img id="flags" src="${pais.flags.png}" alt="${pais.flags.alt}">
-            <h2>${pais.name.common}</h2>
-            <h4>Capital: ${pais.capital}</h4>
-            <h4>Region: ${pais.region}</h4>
-            </div>`
+    <img id="flags" src="${pais.flags.png}" alt="${pais.flags.alt}">
+    <h2>${pais.name.common}</h2>
+    <h4>Capital: ${pais.capital}</h4>
+    <h4>Region: ${pais.region}</h4>
+    </div>`
+}
+
+function info(){
+    alert('teste')
 }
 
 countryApi();
